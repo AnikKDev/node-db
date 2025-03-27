@@ -7,4 +7,23 @@
 6. create aws key-pair
 7. create the vps with `pulumi up` (make sure to run this command from the newly created pulumi project)
 8. ssh (check ~/.ssh/config file's content to get the host, user and the identifiters to ssh into each instances)
-9. 
+
+# Configuration
+## configure mysql
+1. ssh into it
+2. install mysqlserver
+3. configure mysql conf file to allow the remote connection (so that it can be accessible from allowed client - in this case for testing purposes we will allow it from everywhere)
+4. create user
+
+## configure node server
+1. ssh into it from local client
+2. add a systemd service here to chek if mysql db server is up and running
+3. check systemjournal for the mysql-check service status
+
+# Nodejs application
+1. create a directory and set up the nodejs application with `npm init -y` in a `app.js` file
+2. read the user with `get` and retrun the response in the app
+3. assign the user for the app
+4. create a node systemd service for this application
+5. keep in mind to check if the nodejs service only runs after mysql sevice is running in the background.
+6. run the node systemd service 
