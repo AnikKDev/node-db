@@ -23,7 +23,8 @@
 # Nodejs application
 1. create a directory and set up the nodejs application with `npm init -y` in a `app.js` file
 2. read the user with `get` and retrun the response in the app
-3. assign the user for the app
-4. create a node systemd service for this application
-5. keep in mind to check if the nodejs service only runs after mysql sevice is running in the background.
-6. run the node systemd service 
+3. get the db connection status with a `get` api in `/health` endpoint
+4. assign the user for the app
+5. create a node systemd service for this application
+6. keep in mind to check if the nodejs service only runs after mysql sevice is running in the background.
+7. run the node systemd service 
