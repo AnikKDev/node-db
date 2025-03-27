@@ -28,3 +28,6 @@
 5. create a node systemd service for this application
 6. keep in mind to check if the nodejs service only runs after mysql sevice is running in the background.
 7. run the node systemd service 
+
+# Service flow
+![image](https://github.com/user-attachments/assets/9ed4d6e6-f650-445c-bb72-ff48e386030f)
